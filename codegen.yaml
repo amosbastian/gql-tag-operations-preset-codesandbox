@@ -1,0 +1,8 @@
+overwrite: true
+schema:
+  - 'src/api/schema.graphql'
+documents:
+  - 'src/api/documents.graphql'
+generates:
+  src/api/index.ts:
+    preset: gql-tag-operations-preset

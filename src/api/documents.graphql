@@ -1,0 +1,18 @@
+fragment Post on Post {
+  id
+  title
+}
+
+query posts($options: PageQueryOptions) {
+  posts(options: $options) {
+    data {
+      ...Post
+    }
+  }
+}
+
+mutation createPost($input: CreatePostInput!) {
+  createPost(input: $input) {
+    ...Post
+  }
+}
